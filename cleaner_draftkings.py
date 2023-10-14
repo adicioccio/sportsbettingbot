@@ -15,7 +15,7 @@ with open('data/draftkings.csv', 'w', newline='') as csvfile:
     fieldnames = ['book','team','odds']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     writer.writeheader()
-    for div in divs[2:]:
+    for div in divs:
         team = div.find('span', class_='sportsbook-outcome-cell__label').text.split()[-1]
         odds = div.find('span', class_='sportsbook-odds american default-color').text
         writer.writerow({'book': book,'team': team, 'odds': odds})
