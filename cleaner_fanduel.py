@@ -28,11 +28,3 @@ with open('data/fanduel.csv', 'w', newline='') as csvfile:
                 print(team, odds)
         except Exception as e:
                 break    
-# with open('data/bet365.csv', 'w', newline='') as csvfile:
-#     fieldnames = ['book','team', 'odds']
-#     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-#     writer.writeheader()
-#     for div in divs:
-#         team = div.find('span', class_='gl-ParticipantBorderless_Name').text.split()[1]
-#         odds = div.find('span', class_='gl-ParticipantBorderless_Odds').text
-#         writer.writerow({'book': book,'team': team, 'odds': odds})
